@@ -21,6 +21,7 @@ html, body {
   --seondary-fonts: "Dancing script", cursive;
   --color-black: #222;
   --color-white: #fff;
+  scroll-behavior: smooth;
 }
 body {
   font-size: 1.6rem;
@@ -57,7 +58,11 @@ body {
   color: var(--color-black);
 }
 
-
+.header-logo-wrapper {
+  text-decoration: none;
+  color: var(--color-black);
+  
+}
 
 /* Heros sections  */
 
