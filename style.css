@@ -12,6 +12,10 @@ html {
 /* 1rem = 10px */
 }
 
+html, body {
+  overflow-x:hidden;
+}
+
 :root {
   --primary-font: "Roboto", sans-serif;
   --seondary-fonts: "Dancing script", cursive;
@@ -28,10 +32,14 @@ body {
   justify-content: space-around;
   display: flex;
   align-items: center;
+  padding: 0.8rem;
 }
 
 .header-nav-list {
   list-style: none;
+  list-style-type: none;
+  text-transform: capitalize;
+  color: var(--color-black);
 }
 
 .header-nav-list {
@@ -43,16 +51,200 @@ body {
   text-transform: capitalize;
   font-size: bold;
 }
-
-.header-nav-list {
+.header-nav-link {
+  text-decoration: none;
   text-transform: capitalize;
   color: var(--color-black);
 }
 
+
+
+/* Heros sections  */
+
+.hero {
+  height: 70vh;
+  background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0, .5)), url(./assets/6.png);/* RGBA - you can control the opacity of the colo */
+  background-position: center;
+  background-size: cover;
+  background-repeat:  no-repeat;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-subtitle, .hero-title{
+  color: var(--color-white);
+}
+
+.hero-textbox {
+  align-items: center;
+  display: flexbox;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.hero-subtitle {
+  font-family: var(--seondary-fonts);
+  text-transform: capitalize;
+  font-size: 6rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 6rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.call-to-action {
+  text-transform: capitalize;
+  color: var(--color-white);
+  padding: 1.5rem 2rem;
+  background-color: red;
+  text-decoration: none;
+  border-radius: 10px;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.btn-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* about  */
+
+.about-img img{
+  width: 50rem;
+  height: 40rem;
+}
+
+.about {
+  padding: 6rem 12rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.title {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.title-subtitle {
+  font-family: var(--primary-font);
+  text-transform: capitalize;
+  color: var(--color-red);
+  font-size: 4rem;
+  text-align: center;
+}
+
+.title-maintitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5rem;
+  letter-spacing:2px;
+}
+
+.about-text {
+  text-align: center;
+  letter-spacing: 1.8px;
+  color: #999;
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+.call-tct {
+  /* This will center an inline element */
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--color-black);
+  margin: 0 auto;
+
+  /* display: inline-block; */
+  /* width: max-content; */
+}
+
+.about-textbox .call-tct {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.about-img {
+  border-radius: 15px;
+}.about-img:hover {
+  transform: scale(1.02);
+  transition: all 1s;
+}
+
+
+/* BANNER SECTIONS  */
+
+.banner-2 {
+  height: 55vh;
+  background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(./assets/3.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner-2-subtitle {
+  font-family: var(--primary-font);
+  color: var(--color-red);
+  text-transform: capitalize;
+}
+
+.banner-2-maintitle {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+
+
+
+/* RESPONSIVENESS */
+
 @media  screen and (max-width) {
   .header {
     flex-direction: column;
-  }
-  
+  } 
 }
 
+@media  screen and (max-width: 62.5em) {
+  .about {
+    padding: 6rem 8rem;
+  } 
+}
+
+@media  screen and (max-width: 53.125em) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } 
+}
+
+@media  screen and (max-width: 31.25em) {
+  .about-img img {
+    width: 100%;
+  } 
+}
